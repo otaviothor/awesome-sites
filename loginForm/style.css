@@ -1,0 +1,151 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Ubuntu", sans-serif;
+}
+
+body{
+  background: url(https://images.squarespace-cdn.com/content/v1/5907b77e17bffc913c575f7e/1574136120944-OD6XZ4XK3BK4BN45E53M/ke17ZwdGBToddI8pDm48kHuUsiPCHp1olXle4ctIzXR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UbXpAyP8sz_M6Cob-F8bpfA2fQ2tkpNEUwYqXGIDM9w_wRAeN1AbZG4OR41R6pDVyg/BEN_1283.jpg?format=750w) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form{
+  width: calc(100% - 20px);
+  max-width: 500px;
+  background-color: #fff;
+  padding: 50px 40px;
+  border-radius: 4px;
+}
+
+.login-form h1{
+  text-align: center;
+  margin: 48px 0;
+  font-size: 36px;
+  color: #212121;  
+}
+
+.textb{
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.textb input{
+  width: 100%;
+  height: 70px;
+  border: none;
+  background-color: #ededed;
+  border-radius: 4px;
+  color: #212121;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 14px 60px 0 10px;
+}
+
+.placeholder{
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  line-height: 70px;
+  top: 0;
+  left: 20px;
+  color: #9d9d9d;
+  pointer-events: none;
+  transition: 0.2s;
+}
+
+.show-password{
+  position: absolute;
+  right: 20px;
+  line-height: 70px;
+  color: #9d9d9d;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.textb input:focus ~ .placeholder, 
+.textb input:valid ~ .placeholder{
+  left: 10px;
+  top: -16px;
+}
+
+.checkbox{
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  font-weight: 500;
+  color: #212121;
+  margin: 20px 0;
+}
+
+.checkbox input{
+  width: 24px;
+  height: 24px;
+  -webkit-appearance: none;
+  background-color: #ededed;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.checkbox .fa-check{
+  position: absolute;
+  color: #fff;
+  font-size: 14px;
+  width: 24px;
+  text-align: center;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.checkbox input:checked {
+  background-color: #bc252a;
+}
+
+.checkbox input:checked + .fa-check{
+  opacity: 1;
+}
+
+.btn{
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 40px auto;
+  background-color: #bc252a;
+  color: #fff;
+  font-size: 40px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: 0.2s linear;
+}
+
+.btn:hover{
+  opacity: 0.85;
+}
+
+.login-form a{
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 8px;
+  transition: 0.2s linear;
+}
+
+.login-form a:hover{
+  color: #212121;
+}
+
+.btn:disabled{
+  background-color: transparent;
+  color: #ddd;
+  border: 2px solid;
+}
