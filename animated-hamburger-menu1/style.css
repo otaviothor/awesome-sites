@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: linear-gradient(45deg, #3effff, #15ff9e);
+}
+
+.main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.menu{
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu span{
+  position: absolute;
+  width: 45px;
+  height: 4px;
+  background: rgb(80, 80, 80);
+}
+
+.menu input{
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu span:nth-child(2){
+  transform: translateY(-12px);
+  transition: all 0.2s;
+}
+
+.menu span:nth-child(5){
+  transform: translateY(12px);
+  transition: all 0.2s;
+}
+
+.menu input:checked ~ span:nth-child(2){
+  opacity: 0;
+}
+
+.menu input:checked ~ span:nth-child(5){
+  opacity: 0;
+}
+
+.menu span:nth-child(3){
+  transform: rotate(0);
+  transition: all .4s;
+}
+
+.menu span:nth-child(4){
+  transform: rotate(0);
+  transition: all .4s;
+}
+
+.menu input:checked ~ span:nth-child(3){
+  transform: rotate(45deg);
+}
+
+.menu input:checked ~ span:nth-child(4){
+  transform: rotate(-45deg);
+}
